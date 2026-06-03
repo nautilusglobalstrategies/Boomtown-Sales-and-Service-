@@ -23,7 +23,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 60px;
-background:rgba(0,0,0,.5);
+background:rgba(0,0,0,.55);
 backdrop-filter:blur(14px);
 z-index:1000;
 }
@@ -31,6 +31,7 @@ z-index:1000;
 .logo{
 font-size:38px;
 font-weight:900;
+letter-spacing:2px;
 background:linear-gradient(90deg,#FFD700,#00D9FF,#FF4DFA);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -51,8 +52,8 @@ justify-content:center;
 text-align:center;
 padding:120px 40px 60px;
 background:
-radial-gradient(circle at 20% 20%,#ff4dfa44,transparent 30%),
-radial-gradient(circle at 80% 30%,#00d9ff44,transparent 30%),
+radial-gradient(circle at 20% 20%,#ff4dfa55,transparent 30%),
+radial-gradient(circle at 80% 30%,#00d9ff55,transparent 30%),
 radial-gradient(circle at 50% 90%,#ffd70033,transparent 35%),
 linear-gradient(135deg,#070b1a,#160733,#061a35);
 }
@@ -73,6 +74,7 @@ font-size:24px;
 color:#ddd;
 max-width:850px;
 margin:0 auto 40px;
+line-height:1.5;
 }
 
 .btn{
@@ -132,19 +134,11 @@ border-color:#FF4DFA;
 box-shadow:0 0 35px rgba(255,77,250,.4);
 }
 
-.cart-art{
+.cart-card img{
+width:100%;
 height:260px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:
-radial-gradient(circle at 30% 20%,#ffffff22,transparent 20%),
-linear-gradient(135deg,#101c44,#2b0f55);
-}
-
-.cart-art svg{
-width:92%;
-height:92%;
+object-fit:cover;
+display:block;
 }
 
 .cart-info{
@@ -243,73 +237,55 @@ nav ul{display:none}
 <div class="cart-grid">
 
 <div class="cart-card">
-<div class="cart-art">
-<svg viewBox="0 0 600 350">
-<rect x="120" y="95" width="250" height="105" rx="22" fill="#7B2CFF"/>
-<rect x="155" y="55" width="150" height="70" rx="16" fill="#00D9FF"/>
-<line x1="150" y1="55" x2="110" y2="190" stroke="#FFD700" stroke-width="14"/>
-<line x1="310" y1="55" x2="390" y2="190" stroke="#FFD700" stroke-width="14"/>
-<rect x="340" y="125" width="95" height="75" rx="12" fill="#FF4DFA"/>
-<rect x="95" y="185" width="365" height="35" rx="18" fill="#FFD700"/>
-<circle cx="165" cy="235" r="45" fill="#111"/>
-<circle cx="385" cy="235" r="45" fill="#111"/>
-<circle cx="165" cy="235" r="20" fill="#00D9FF"/>
-<circle cx="385" cy="235" r="20" fill="#00D9FF"/>
-<rect x="405" y="82" width="18" height="115" rx="8" fill="#fff"/>
-<circle cx="430" cy="85" r="22" fill="#FFD700"/>
-</svg>
-</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Golf_cart_fairway.jpg/1024px-Golf_cart_fairway.jpg" alt="White golf cart on fairway">
 <div class="cart-info">
-<h3>Neon Phantom</h3>
-<div class="price">$14,995</div>
+<h3>Course Cruiser</h3>
+<div class="price">$9,995</div>
 <button>View Cart</button>
 </div>
 </div>
 
 <div class="cart-card">
-<div class="cart-art">
-<svg viewBox="0 0 600 350">
-<rect x="105" y="105" width="285" height="95" rx="25" fill="#00D9FF"/>
-<rect x="145" y="60" width="160" height="70" rx="18" fill="#FFD700"/>
-<line x1="145" y1="60" x2="105" y2="195" stroke="#FF4DFA" stroke-width="14"/>
-<line x1="305" y1="60" x2="410" y2="195" stroke="#FF4DFA" stroke-width="14"/>
-<rect x="360" y="130" width="90" height="70" rx="14" fill="#8A2BE2"/>
-<rect x="90" y="188" width="380" height="35" rx="18" fill="#FF4DFA"/>
-<circle cx="165" cy="238" r="46" fill="#111"/>
-<circle cx="400" cy="238" r="46" fill="#111"/>
-<circle cx="165" cy="238" r="20" fill="#FFD700"/>
-<circle cx="400" cy="238" r="20" fill="#FFD700"/>
-<path d="M470 145 L515 120 L520 210 L470 200 Z" fill="#FFD700"/>
-</svg>
-</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Yamaha_Golf_Cart_%281%29.jpg/1024px-Yamaha_Golf_Cart_%281%29.jpg" alt="Yamaha golf cart">
 <div class="cart-info">
-<h3>Boomtown X</h3>
-<div class="price">$18,495</div>
+<h3>Classic Yamaha</h3>
+<div class="price">$7,995</div>
 <button>View Cart</button>
 </div>
 </div>
 
 <div class="cart-card">
-<div class="cart-art">
-<svg viewBox="0 0 600 350">
-<rect x="115" y="100" width="275" height="100" rx="24" fill="#FFD700"/>
-<rect x="155" y="58" width="165" height="68" rx="18" fill="#FF4DFA"/>
-<line x1="155" y1="58" x2="115" y2="195" stroke="#00D9FF" stroke-width="14"/>
-<line x1="320" y1="58" x2="415" y2="195" stroke="#00D9FF" stroke-width="14"/>
-<rect x="365" y="128" width="92" height="72" rx="14" fill="#7B2CFF"/>
-<rect x="92" y="188" width="385" height="35" rx="18" fill="#00D9FF"/>
-<circle cx="170" cy="240" r="48" fill="#111"/>
-<circle cx="405" cy="240" r="48" fill="#111"/>
-<circle cx="170" cy="240" r="21" fill="#FF4DFA"/>
-<circle cx="405" cy="240" r="21" fill="#FF4DFA"/>
-<circle cx="470" cy="95" r="18" fill="#FFD700"/>
-<circle cx="500" cy="125" r="12" fill="#FF4DFA"/>
-<circle cx="455" cy="140" r="10" fill="#00D9FF"/>
-</svg>
-</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Solar_powered_golf_carts.jpg/1024px-Solar_powered_golf_carts.jpg" alt="Red solar powered golf carts">
 <div class="cart-info">
-<h3>Firework Edition</h3>
-<div class="price">$21,995</div>
+<h3>Solar Sport</h3>
+<div class="price">$12,995</div>
+<button>View Cart</button>
+</div>
+</div>
+
+<div class="cart-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Extreme_off_road_golf_cart.jpg/1024px-Extreme_off_road_golf_cart.jpg" alt="Extreme off road golf cart">
+<div class="cart-info">
+<h3>Off-Road Beast</h3>
+<div class="price">$15,995</div>
+<button>View Cart</button>
+</div>
+</div>
+
+<div class="cart-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Club_Car_Precedent_i3.JPG/1024px-Club_Car_Precedent_i3.JPG" alt="Club Car golf cart on course">
+<div class="cart-info">
+<h3>Club Car Premium</h3>
+<div class="price">$13,495</div>
+<button>View Cart</button>
+</div>
+</div>
+
+<div class="cart-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Golf_cart_at_the_Palm_Springs_Aerial_Tramway.jpg/1024px-Golf_cart_at_the_Palm_Springs_Aerial_Tramway.jpg" alt="Custom black golf cart">
+<div class="cart-info">
+<h3>Custom Blackout</h3>
+<div class="price">$16,995</div>
 <button>View Cart</button>
 </div>
 </div>
