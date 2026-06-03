@@ -8,265 +8,288 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family: Arial, sans-serif;
-    background:#070b1a;
-    color:white;
-    overflow-x:hidden;
+font-family:Arial,sans-serif;
+background:#050816;
+color:white;
+overflow-x:hidden;
 }
 
 /* NAVBAR */
 
 nav{
-    width:100%;
-    padding:20px 60px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:fixed;
-    top:0;
-    z-index:1000;
-    background:rgba(0,0,0,0.45);
-    backdrop-filter:blur(12px);
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(14px);
+z-index:1000;
 }
 
 .logo{
-    font-size:32px;
-    font-weight:900;
-    background:linear-gradient(90deg,#ffd700,#ff4df8,#00d9ff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+font-size:38px;
+font-weight:900;
+letter-spacing:2px;
+background:linear-gradient(90deg,#FFD700,#00D9FF,#FF4DFA);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 nav ul{
-    display:flex;
-    gap:30px;
-    list-style:none;
+display:flex;
+gap:30px;
+list-style:none;
 }
 
 nav ul li{
-    cursor:pointer;
-    transition:0.3s;
-    font-weight:bold;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
 }
 
 nav ul li:hover{
-    color:#ffd700;
+color:#FFD700;
 }
 
 /* HERO */
 
 .hero{
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px;
-    background:
-    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.7)),
-    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1974&auto=format&fit=crop');
-    background-size:cover;
-    background-position:center;
-    position:relative;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.8)),
+url('https://images.unsplash.com/photo-1517846693594-1567da72af75?q=80&w=2070&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
 }
 
 .hero::before{
-    content:'';
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:
-    radial-gradient(circle at top left,#8d2fff44,transparent 35%),
-    radial-gradient(circle at bottom right,#00d9ff44,transparent 35%),
-    radial-gradient(circle at center,#ffd70033,transparent 40%);
+content:'';
+position:absolute;
+width:120%;
+height:120%;
+background:
+radial-gradient(circle,#ff4dfa33 0%,transparent 40%),
+radial-gradient(circle,#00d9ff33 0%,transparent 35%),
+radial-gradient(circle,#ffd70022 0%,transparent 40%);
+animation:pulse 8s infinite linear;
+}
+
+@keyframes pulse{
+0%{transform:rotate(0deg) scale(1);}
+50%{transform:rotate(180deg) scale(1.2);}
+100%{transform:rotate(360deg) scale(1);}
 }
 
 .hero-content{
-    position:relative;
-    z-index:2;
-    max-width:900px;
+position:relative;
+z-index:2;
+max-width:950px;
 }
 
 .hero h1{
-    font-size:85px;
-    font-weight:900;
-    line-height:1;
-    margin-bottom:20px;
-    text-transform:uppercase;
-    background:linear-gradient(90deg,#ffffff,#ffd700,#ff4df8,#00d9ff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+font-size:95px;
+line-height:.95;
+font-weight:900;
+margin-bottom:25px;
+text-transform:uppercase;
+background:linear-gradient(90deg,#fff,#FFD700,#FF4DFA,#00D9FF);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .hero p{
-    font-size:24px;
-    color:#ddd;
-    margin-bottom:40px;
+font-size:24px;
+color:#ddd;
+margin-bottom:40px;
+line-height:1.5;
 }
 
 .hero-buttons{
-    display:flex;
-    gap:20px;
-    justify-content:center;
-    flex-wrap:wrap;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
 .btn{
-    padding:18px 35px;
-    border:none;
-    border-radius:50px;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
+padding:18px 35px;
+border:none;
+border-radius:50px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
 }
 
 .btn-primary{
-    background:linear-gradient(90deg,#ffd700,#ff4df8);
-    color:black;
+background:linear-gradient(90deg,#FFD700,#FF4DFA);
+color:black;
 }
 
 .btn-primary:hover{
-    transform:scale(1.05);
+transform:scale(1.08);
 }
 
 .btn-secondary{
-    background:transparent;
-    border:2px solid #00d9ff;
-    color:white;
+background:transparent;
+border:2px solid #00D9FF;
+color:white;
 }
 
 .btn-secondary:hover{
-    background:#00d9ff;
-    color:black;
+background:#00D9FF;
+color:black;
 }
 
 /* INVENTORY */
 
 .inventory{
-    padding:100px 60px;
-    background:#0f1325;
+padding:110px 60px;
+background:#0A1024;
 }
 
 .section-title{
-    text-align:center;
-    font-size:55px;
-    margin-bottom:60px;
-    font-weight:900;
-    background:linear-gradient(90deg,#ffd700,#00d9ff,#ff4df8);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+font-size:58px;
+font-weight:900;
+text-align:center;
+margin-bottom:70px;
+background:linear-gradient(90deg,#FFD700,#00D9FF,#FF4DFA);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .cart-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:35px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
 }
 
 .cart-card{
-    background:#171d33;
-    border-radius:25px;
-    overflow:hidden;
-    transition:0.4s;
-    border:2px solid transparent;
+background:#141C38;
+border-radius:25px;
+overflow:hidden;
+transition:.4s;
+border:2px solid transparent;
 }
 
 .cart-card:hover{
-    transform:translateY(-10px);
-    border:2px solid #ff4df8;
-    box-shadow:0 0 35px rgba(255,77,248,.35);
+transform:translateY(-12px);
+border:2px solid #FF4DFA;
+box-shadow:0 0 35px rgba(255,77,250,.35);
 }
 
 .cart-card img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
+width:100%;
+height:240px;
+object-fit:cover;
 }
 
 .cart-info{
-    padding:25px;
+padding:25px;
 }
 
 .cart-info h3{
-    font-size:28px;
-    margin-bottom:10px;
+font-size:30px;
+margin-bottom:10px;
 }
 
 .price{
-    font-size:30px;
-    color:#ffd700;
-    font-weight:900;
-    margin-bottom:20px;
+font-size:34px;
+font-weight:900;
+color:#FFD700;
+margin-bottom:20px;
 }
 
 .cart-info button{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:15px;
-    background:linear-gradient(90deg,#00d9ff,#8d2fff);
-    color:white;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+background:linear-gradient(90deg,#00D9FF,#8A2BE2);
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
 }
 
-/* SERVICE SECTION */
+/* SERVICE */
 
 .service{
-    padding:100px 60px;
-    background:linear-gradient(135deg,#12091f,#0f2438);
-    text-align:center;
+padding:110px 60px;
+text-align:center;
+background:
+linear-gradient(135deg,#12091F,#102848);
 }
 
 .service h2{
-    font-size:60px;
-    margin-bottom:20px;
+font-size:60px;
+margin-bottom:25px;
+background:linear-gradient(90deg,#FFD700,#FF4DFA,#00D9FF);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .service p{
-    max-width:800px;
-    margin:auto;
-    font-size:22px;
-    color:#ccc;
-    line-height:1.6;
+max-width:850px;
+margin:auto;
+font-size:22px;
+line-height:1.7;
+color:#ddd;
 }
 
 /* FOOTER */
 
 footer{
-    background:black;
-    padding:40px;
-    text-align:center;
-    color:#888;
+background:black;
+padding:40px;
+text-align:center;
+color:#777;
+font-size:16px;
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-    nav{
-        padding:20px;
-    }
+nav{
+padding:20px;
+}
 
-    .hero h1{
-        font-size:52px;
-    }
+nav ul{
+display:none;
+}
 
-    .hero p{
-        font-size:18px;
-    }
+.hero h1{
+font-size:58px;
+}
 
-    .section-title{
-        font-size:40px;
-    }
+.hero p{
+font-size:18px;
+}
+
+.section-title{
+font-size:40px;
+}
+
+.service h2{
+font-size:42px;
+}
 
 }
 
@@ -277,89 +300,115 @@ footer{
 <body>
 
 <nav>
-    <div class="logo">BOOMTOWN</div>
 
-    <ul>
-        <li>Inventory</li>
-        <li>Custom Builds</li>
-        <li>Service</li>
-        <li>Financing</li>
-        <li>Delivery</li>
-    </ul>
+<div class="logo">BOOMTOWN</div>
+
+<ul>
+<li>Inventory</li>
+<li>Custom Builds</li>
+<li>Financing</li>
+<li>Service</li>
+<li>Delivery</li>
+</ul>
+
 </nav>
 
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <h1>Golf Cart<br>Sales & Service</h1>
+<h1>Golf Cart<br>Sales & Service</h1>
 
-        <p>
-            Loud colors. Custom builds. Premium carts.  
-            The ultimate golf cart experience.
-        </p>
+<p>
+Luxury carts. Loud colors. Premium service.  
+Built for neighborhoods, campgrounds, resorts, and custom lifestyles.
+</p>
 
-        <div class="hero-buttons">
-            <button class="btn btn-primary">Browse Inventory</button>
-            <button class="btn btn-secondary">Schedule Delivery</button>
-        </div>
+<div class="hero-buttons">
 
-    </div>
+<button class="btn btn-primary">Browse Inventory</button>
+
+<button class="btn btn-secondary">Schedule Delivery</button>
+
+</div>
+
+</div>
 
 </section>
 
 <section class="inventory">
 
-    <h2 class="section-title">Featured Carts</h2>
+<h2 class="section-title">Featured Golf Carts</h2>
 
-    <div class="cart-grid">
+<div class="cart-grid">
 
-        <div class="cart-card">
-            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1883&auto=format&fit=crop">
-            <div class="cart-info">
-                <h3>Midnight Neon</h3>
-                <div class="price">$14,995</div>
-                <button>View Cart</button>
-            </div>
-        </div>
+<div class="cart-card">
 
-        <div class="cart-card">
-            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1974&auto=format&fit=crop">
-            <div class="cart-info">
-                <h3>Firework Edition</h3>
-                <div class="price">$16,495</div>
-                <button>View Cart</button>
-            </div>
-        </div>
+<img src="https://images.unsplash.com/photo-1621955964441-c173e01c135b?q=80&w=1974&auto=format&fit=crop">
 
-        <div class="cart-card">
-            <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=2070&auto=format&fit=crop">
-            <div class="cart-info">
-                <h3>Boomtown Beast</h3>
-                <div class="price">$18,995</div>
-                <button>View Cart</button>
-            </div>
-        </div>
+<div class="cart-info">
 
-    </div>
+<h3>Neon Phantom</h3>
+
+<div class="price">$14,995</div>
+
+<button>View Cart</button>
+
+</div>
+
+</div>
+
+<div class="cart-card">
+
+<img src="https://images.unsplash.com/photo-1593766827228-8737b4534aa6?q=80&w=1974&auto=format&fit=crop">
+
+<div class="cart-info">
+
+<h3>Boomtown X</h3>
+
+<div class="price">$18,495</div>
+
+<button>View Cart</button>
+
+</div>
+
+</div>
+
+<div class="cart-card">
+
+<img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1974&auto=format&fit=crop">
+
+<div class="cart-info">
+
+<h3>Firework Edition</h3>
+
+<div class="price">$21,995</div>
+
+<button>View Cart</button>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 <section class="service">
 
-    <h2>Custom Builds. Service. Delivery.</h2>
+<h2>Custom Builds • Delivery • Financing</h2>
 
-    <p>
-        From lifted street carts to luxury neighborhood cruisers,
-        Boomtown delivers custom golf cart experiences with nationwide delivery,
-        online ordering, financing options, and premium service support.
-    </p>
+<p>
+Boomtown delivers premium golf cart experiences with custom lifted carts,
+online ordering, nationwide delivery scheduling, financing options,
+and high-end service support.
+</p>
 
 </section>
 
 <footer>
 
-    © 2026 Boomtown Sales & Service
+© 2026 Boomtown Sales & Service
 
 </footer>
 
